@@ -3,8 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(
-    open('model.pkl', 'rb'), encoding = 'latin1')
+model = pickle.load(open('model.pkl', 'rb'), encoding='latin1')
 
 
 @app.route('/')
@@ -34,4 +33,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, host="0.0.0.0")
+    app.run(debug=True)

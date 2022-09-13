@@ -4,7 +4,7 @@ from sklearn import linear_model
 import pickle
 
 df = pd.read_csv(
-    'newhousing.csv')
+    '/Users/mithunkumar/Desktop/HomePrices/newhousing.csv')
 
 #df.bedrooms = df.bedrooms.fillna(df.bedrooms.median())
 
@@ -24,4 +24,3 @@ pickle.dump(reg, open('model.pkl', 'wb'))
 # Loading model to compare the results
 model = pickle.load(open('model.pkl', 'rb'))
 print(model.predict([[5500, 3, 2, 2, 1, 0, 1, 1833.22, 0.667]]))
-
